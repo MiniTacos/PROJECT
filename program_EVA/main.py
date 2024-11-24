@@ -16,9 +16,10 @@ def main():
     while display_start:
         clock.tick(30) #Тут я устанавливаю FPS
         display.blit(background, (0, 0))
+        display.blit(floor_image, (0, 565))
 
         # Отображаем счетчик
-        font = pygame.font.Font(None, 60)
+        font = pygame.font.Font(None, 90)
         score_counter = font.render(f"Счет: {score}", True, (225, 225, 225))
         display.blit(score_counter, (900, 90))
 

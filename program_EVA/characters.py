@@ -4,7 +4,7 @@ class Character():
     #Класс персонажа: его характеристики, отображение на экране и возможность прыжка
     def __init__(self, type, height=80, width=80):
         """Основные параметры персонажа"""
-        self.horizontal_coordinate, self.vertical_coordinate = 0, 300
+        self.horizontal_coordinate, self.vertical_coordinate = 0, 0
         self.height, self.width = height, width
         self.type = type
         self.jumping = False
@@ -32,6 +32,7 @@ class Character():
 
 def type_of_character(type):
     """Выбор персонажа"""
+    global character
     characters = [ Character(character_type_one),
                    Character(character_type_two)
     ]
@@ -42,7 +43,8 @@ def type_of_character(type):
         for i, character in enumerate(characters):
             character.appearance()
             #Позиционируем персонажей
-            character.horizontal_coordinate = 10 + i * 230
+            character.vertical_coordinate = 150
+            character.horizontal_coordinate = 300 + i * 230
 
         #параметры текста на экране
         font = pygame.font.Font(None, 60)
@@ -58,6 +60,10 @@ def type_of_character(type):
                 return None
             if i.type == pygame.KEYDOWN:
                 if i.key == pygame.K_1:
+                    character.vertical_coordinate = 3
+                    character.horizontal_coordinate = 50
                     return characters[0]
                 elif i.key == pygame.K_2:
+                    character.vertical_coordinate = 290
+                    character.horizontal_coordinate = 50
                     return characters[1]
