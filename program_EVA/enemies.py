@@ -11,7 +11,7 @@ class Enemy():
 
     def appearance(self):
         """Отображение врага, через которого надо прыгать"""
-        pygame.draw.rect(display, (random.randint(50, 255), random.randint(1, 65), random.randint(1, 255)), (self.horizontal_coordinate, self.vertical_coordinate, self.width, self.height))
+        pygame.draw.rect(display, (45, 237, 123), (self.horizontal_coordinate, self.vertical_coordinate, self.width, self.height))
 
     def movement(self, move):
         """Передвижение врага"""
