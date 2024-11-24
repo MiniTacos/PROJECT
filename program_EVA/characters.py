@@ -15,7 +15,7 @@ class Character():
         display.blit(self.type, (self.horizontal_coordinate, self.vertical_coordinate, self.height, self.width))
 
     def jump(self):
-        """Функция, чтобы персонаж мог прыгать через препятствия"""
+        """Функция, чтобы персонаж мог прыгать через врагов"""
         jump_speed = 0.5 #Коэффициент ускорения прыжка
         jump_way = (self.jump_height ** 2) #Прыжок описан по сути как парабола с отображением по Оy
         if self.jumping:
