@@ -35,7 +35,7 @@ def main():
 
         #Появление врагов
         spawn_time += 1
-        if spawn_time > random.randint(30, 300):
+        if spawn_time > random.randint(20, 300):
             enemies.append(Enemy())
             spawn_time = 0
 
