@@ -20,7 +20,7 @@ def main():
         # Отображаем счетчик
         font = pygame.font.Font(None, 60)
         score_counter = font.render(f"Счет: {score}", True, (225, 225, 225))
-        display.blit(score_counter, (100, 90))
+        display.blit(score_counter, (900, 90))
 
         #Проверяем все действия с кнопками на игровом дисплее
         for i in pygame.event.get():
