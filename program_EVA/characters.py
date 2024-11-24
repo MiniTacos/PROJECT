@@ -2,7 +2,7 @@ from enemies import *
 
 class Character():
     #Класс персонажа: его характеристики, отображение на экране и возможность прыжка
-    def __init__(self, type, height=80, width=80):
+    def __init__(self, type, height=150, width=150):
         """Основные параметры персонажа"""
         self.horizontal_coordinate, self.vertical_coordinate = 0, 0
         self.height, self.width = height, width
