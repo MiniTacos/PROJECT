@@ -3,11 +3,10 @@ from options import *
 class Enemy():
     def __init__(self, height=225, width=50):
         """Основные параметры врагов"""
-        self.horizontal_coordinate = display_width #Так как враги появляются справа
+        self.horizontal_coordinate = display_width #Так как враги появляются справа, их начальная координата будет тоже справа
         self.vertical_coordinate = 340
         self.height = height
         self.width = width
-
 
     def appearance(self):
         """Отображение врага, через которого надо прыгать"""

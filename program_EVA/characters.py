@@ -33,8 +33,8 @@ class Character():
 def type_of_character(type):
     """Выбор персонажа"""
     global character
-    characters = [ Character(character_type_one),
-                   Character(character_type_two)
+    characters = [ Character(character_type_one), #Аянами
+                   Character(character_type_two)  #Аска
     ]
 
     while True:
