@@ -50,6 +50,7 @@ def main():
             enemy.appearance()
 
             #Проверка проигрыша, если персонаж заденет врага
+            #Идея проверки была позаимствована у ChatGPT
             if (player.horizontal_coordinate + player.width > enemy.horizontal_coordinate) and (player.horizontal_coordinate < enemy.horizontal_coordinate + enemy.width) and (player.vertical_coordinate + player.height > enemy.vertical_coordinate):
                 display_start = False
 
@@ -57,7 +58,7 @@ def main():
             if 140 <= enemy.horizontal_coordinate <= 150:
                 score += 1
 
-        #Появление персонажа на дисплее
+        #Появление персонажа на дисплее (оно идет позже для того, чтобы моделька персонажа была выше, чем моделька объекта-врага)
         player.appearance()
 
         #Исчезновение врагов за пределами дисплея
