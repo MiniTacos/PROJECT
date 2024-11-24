@@ -1,4 +1,4 @@
-from module_3 import *
+from characters import *
 
 #Запускаем игру
 def main():

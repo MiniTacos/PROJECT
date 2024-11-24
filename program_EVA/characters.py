@@ -1,4 +1,4 @@
-from module_2 import *
+from enemies import *
 
 class Character():
     #Класс персонажа: его характеристики, отображение на экране и возможность прыжка

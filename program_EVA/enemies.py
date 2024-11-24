@@ -1,4 +1,4 @@
-from module_1 import *
+from options import *
 
 class Enemy():
     def __init__(self, height=225, width=50):
