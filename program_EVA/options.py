@@ -15,7 +15,6 @@ pygame.display.set_icon(pygame.image.load("images/icon.png"))
 background = pygame.image.load("images/background.jpg")
 character_type_one = pygame.image.load("images/character1.png")
 character_type_two = pygame.image.load("images/character2.png")
-enemy_image = pygame.image.load("images/enemy.png")
 
 #Настройка времени и гравитации в игре
 clock = pygame.time.Clock()
