@@ -1,1 +1,2 @@
-
+Установка внешнего пакета pygame
+pip install pygame 
