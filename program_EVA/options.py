@@ -1,3 +1,6 @@
+"""
+Модуль с основными настройками игры и инициализацией pygame
+"""
 import pygame
 import random
 
