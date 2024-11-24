@@ -2,7 +2,6 @@ from characters import *
 
 #Запускаем игру
 def main():
-    """Запускаем дисплей с игрой"""
     player = type_of_character(type)
     if player is None:
         return
