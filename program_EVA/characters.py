@@ -11,7 +11,7 @@ class Character():
         self.jump_height = 11.5
 
     def appearance(self):
-        """Появление персонажа на экране"""
+        """Появление персонажа на дисплее"""
         display.blit(self.type, (self.horizontal_coordinate, self.vertical_coordinate, self.height, self.width))
 
     def jump(self):
@@ -52,7 +52,7 @@ def type_of_character(type):
         display.blit(text, (100, 90))
         pygame.display.update()
 
-        #Проверяем все действия с кнопками в меню(?)
+        #Проверяем все действия с кнопками в меню
         for i in pygame.event.get():
             if i.type == pygame.QUIT or (i.type == pygame.KEYDOWN and i.key == pygame.K_ESCAPE):
                 display_start = False
@@ -60,10 +60,6 @@ def type_of_character(type):
                 return None
             if i.type == pygame.KEYDOWN:
                 if i.key == pygame.K_1:
-                    character.vertical_coordinate = 3
-                    character.horizontal_coordinate = 50
                     return characters[0]
                 elif i.key == pygame.K_2:
-                    character.vertical_coordinate = 290
-                    character.horizontal_coordinate = 50
                     return characters[1]

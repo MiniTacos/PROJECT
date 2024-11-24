@@ -30,6 +30,10 @@ def main():
         backspace_press = pygame.key.get_pressed()
         if backspace_press[pygame.K_SPACE] and not player.jumping:
             player.jumping = True
+        Ayanamy, Aska = pygame.key.get_pressed(), pygame.key.get_pressed()
+        if Ayanamy[pygame.K_1] or Aska[pygame.K_2]:
+            player.vertical_coordinate = 290
+            player.horizontal_coordinate = 50
 
         #Вызываю функцию с прыжком
         player.jump()
