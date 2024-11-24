@@ -1,3 +1,3 @@
 Установка внешнего пакета pygame
 pip install pygame 
-pyagme version = 2.6.1
+pygame version = 2.6.1
