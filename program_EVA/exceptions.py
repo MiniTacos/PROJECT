@@ -3,7 +3,11 @@
 """
 from options import *
 
-class WidthError(Exception):
+class BaseExceptions(Exception):
+    """Базовый класс исключений"""
+    pass
+
+class WidthError(BaseExceptions):
     """Исключение для ошибок, связанных с шириной"""
     pass
     def set_character_width(width):
@@ -11,21 +15,21 @@ class WidthError(Exception):
         if width <= 0:
             raise WidthError()
 
-class HeightError(Exception):
+class HeightError(BaseExceptions):
     """Исключение для ошибок, связанных с высотой"""
     def set_character_width(height):
         """Устанавливает высоту"""
         if height <= 0:
             raise HeightError()
 
-class NumberFormatError(Exception):
+class NumberFormatError(BaseExceptions):
     """Исключение для ошибок, связанных с числами"""
     def set_character_coordinates(x, y):
         """Проверка формата"""
         if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
             raise NumberFormatError()
 
-class TextError(Exception):
+class TextError(BaseExceptions):
     """Text"""
     def show_error_message(self):
         """Показывает сообщение об ошибке на экране"""
