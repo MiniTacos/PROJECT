@@ -1,6 +1,8 @@
 from characters import *
+from decorators import *
 
 # Запускаем игру
+@christmas_tree_decorator
 def main():
     global display_height, display_width
     player = type_of_character(type)
@@ -29,9 +31,14 @@ def main():
                 display_start = False
 
         backspace_press = pygame.key.get_pressed()
-        if backspace_press[pygame.K_SPACE] and not player.jumping:
+
+        @play_jump_sound_decorator(sound1)
+        def player_jump(player):
+            """Звук при прыжке"""
             player.jumping = True
-            sound1.play()
+
+        if backspace_press[pygame.K_SPACE] and not player.jumping:
+            player_jump(player)
 
         Ayanamy, Aska = pygame.key.get_pressed(), pygame.key.get_pressed() #Изменение положения персонажей в пространстве
         if Ayanamy[pygame.K_1] or Aska[pygame.K_2]:
