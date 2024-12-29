@@ -1,3 +1,6 @@
+"""
+Модуль с исключениями
+"""
 from options import *
 
 class WidthError(Exception):
